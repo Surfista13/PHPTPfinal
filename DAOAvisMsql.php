@@ -1,6 +1,15 @@
 <?php
 
-class DAOAvisMsql
+class DAOAvisMsql implements DAOAvis
 {
 
+    function AfficherUnAvis()
+    {
+
+    }
+
+    function AfficherUnAvisParIdParNom()
+    {
+
+    }
 }

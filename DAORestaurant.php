@@ -2,5 +2,7 @@
 
 interface DAORestaurant
 {
+    function AfficherTousLesRestaurants();
+    function AfficherUnRestaurantParId();
 
 }

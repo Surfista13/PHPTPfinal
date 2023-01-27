@@ -1,6 +1,14 @@
 <?php
 
-class DAORestaurantMsql
+class DAORestaurantMsql implements DAORestaurant
 {
+    function AfficherTousLesRestaurants()
+    {
 
+    }
+
+    function AfficherUnRestaurantParId()
+    {
+
+    }
 }
