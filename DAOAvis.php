@@ -2,6 +2,6 @@
 
 interface DAOAvis
 {
-    function AfficherUnAvis();
-    function AfficherUnAvisParIdParNom();
+    function AfficherTousLesAvis();
+    function AfficherUnAvisParIdRestaurant($id);
 }

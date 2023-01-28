@@ -1,0 +1,13 @@
+header{
+    color: brown;
+}
+footer{
+    color:darkgreen;
+}
+.listeRestaurant, .listeAvis{
+    list-style: none;
+}
+.nom{
+    font-size: 18px;
+    font-weight: bolder;
+}

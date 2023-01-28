@@ -3,6 +3,6 @@
 interface DAORestaurant
 {
     function AfficherTousLesRestaurants();
-    function AfficherUnRestaurantParId();
+    function AfficherUnRestaurantParId($id);
 
 }

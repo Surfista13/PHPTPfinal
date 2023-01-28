@@ -1,15 +1,25 @@
 <?php
-
+require_once ('ConnexionMsql.php');
+require_once ('DAOAvis.php');
 class DAOAvisMsql implements DAOAvis
 {
 
-    function AfficherUnAvis()
+    function AfficherTousLesAvis()
     {
-
+        $pdo = ConnexionMsql::getConnexion();
+        $query = "select idRestaurant, idAvis, auteur, note, commentaire from avis;";
+        $pstmt = $pdo->prepare($query);
+        $pstmt->execute();
+        return $pstmt->fetchAll();
     }
 
-    function AfficherUnAvisParIdParNom()
+    function AfficherUnAvisParIdRestaurant($id)
     {
-
+        $pdo = ConnexionMsql::getConnexion();
+        $query = "select idRestaurant, idAvis, auteur, note, commentaire from avis where idRestaurant =:idRestaurant;";
+        $pstmt = $pdo->prepare($query);
+        $pstmt->bindValue(':idRestaurant',$id);
+        $pstmt->execute();
+        return $pstmt->fetchAll();
     }
 }

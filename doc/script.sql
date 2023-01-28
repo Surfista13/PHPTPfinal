@@ -26,7 +26,7 @@ create table avis (
 use Restaurant;
 alter table avis
 add CONSTRAINT FK_idRestaurant_Restaurants_idRestaurant
-FOREIGN KEY (idRestaurant)  REFERENCES restaurants(idRestaurant);
+FOREIGN KEY (idRestaurant)  REFERENCES restaurants(idRestaurant) ON DELETE CASCADE;
 
 /*Insertion restaurant*/
 insert into restaurants (nom, adresse, cp, ville, telephone, description)
