@@ -1,5 +1,6 @@
 <?php
 require_once ('DAL/DAOFactory.php');
+require_once ('Exceptions/ExceptionBll.php');
 class AvisManager
 {
     private static $avisManager;
@@ -12,7 +13,9 @@ class AvisManager
     }
 
     public function afficherTousAvisPourUnRestaurant($id){
-        //TODO ajouter contrôle idrestaurant
+        if(!filter_var($id,FILTER_VALIDATE_INT)){
+            throw new ExceptionBll('L\'id restaurant est erroné',50);
+        };
         return DAOFactory::getAvisDAO()->AfficherUnAvisParIdRestaurant($id);
     }
 

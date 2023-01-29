@@ -16,7 +16,9 @@ class RestaurantManager
     }
 
     public function afficherUnRestaurants ($id){
-        //TODO ajouter contrôle idrestaurant
+        if(!filter_var($id,FILTER_VALIDATE_INT)){
+            throw new ExceptionBll('L\'id restaurant est erroné',50);
+        };
         return DAOFactory::getRestaurantDAO()->AfficherUnRestaurantParId($id);
     }
 
