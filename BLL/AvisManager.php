@@ -12,6 +12,7 @@ class AvisManager
     }
 
     public function afficherTousAvisPourUnRestaurant($id){
+        //TODO ajouter contrôle idrestaurant
         return DAOFactory::getAvisDAO()->AfficherUnAvisParIdRestaurant($id);
     }
 

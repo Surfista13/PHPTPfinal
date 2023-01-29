@@ -16,6 +16,7 @@ class RestaurantManager
     }
 
     public function afficherUnRestaurants ($id){
+        //TODO ajouter contrôle idrestaurant
         return DAOFactory::getRestaurantDAO()->AfficherUnRestaurantParId($id);
     }
 

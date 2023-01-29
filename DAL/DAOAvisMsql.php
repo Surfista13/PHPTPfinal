@@ -8,8 +8,12 @@ class DAOAvisMsql implements DAOAvis
     {
         $pdo = ConnexionMsql::getConnexion();
         $query = "select idRestaurant, idAvis, auteur, note, commentaire from avis;";
-        $pstmt = $pdo->prepare($query);
-        $pstmt->execute();
+        try{
+            $pstmt = $pdo->prepare($query);
+            $pstmt->execute();
+        }catch (Exception $e){
+            throw new ExceptionRequeteSql($e->getCode()." - "."Erreur sur l'execution de la requête de la fonction : ".__FUNCTION__);
+        }
         return $pstmt->fetchAll();
     }
 
@@ -17,9 +21,13 @@ class DAOAvisMsql implements DAOAvis
     {
         $pdo = ConnexionMsql::getConnexion();
         $query = "select idRestaurant, idAvis, auteur, note, commentaire from avis where idRestaurant =:idRestaurant;";
-        $pstmt = $pdo->prepare($query);
-        $pstmt->bindValue(':idRestaurant',$id);
-        $pstmt->execute();
+        try{
+            $pstmt = $pdo->prepare($query);
+            $pstmt->bindValue(':idRestaurant',$id);
+            $pstmt->execute();
+        }catch (Exception $e){
+            throw new ExceptionRequeteSql($e->getCode()." - "."Erreur sur l'execution de la requête de la fonction : ".__FUNCTION__);
+        }
         return $pstmt->fetchAll();
     }
 }
