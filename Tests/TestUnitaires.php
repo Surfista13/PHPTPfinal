@@ -1,8 +1,8 @@
 <?php
-require_once ('ConnexionMsql.php');
-require_once ('DAOFactory.php');
-require_once ('DAOAvis.php');
-require_once ('DAORestaurant.php');
+require_once ('ConnexionBdd/ConnexionMsql.php');
+require_once ('DAL/DAOFactory.php');
+require_once ('DAL/DAOAvis.php');
+require_once ('DAL/DAORestaurant.php');
 
 
 //Test connexion

@@ -1,6 +1,6 @@
 <?php
-require_once 'DAOAvisMsql.php';
-require_once 'DAORestaurantMsql.php';
+require_once 'DAL/DAOAvisMsql.php';
+require_once 'DAL/DAORestaurantMsql.php';
 class DAOFactory
 {
     public static function getAvisDAO()

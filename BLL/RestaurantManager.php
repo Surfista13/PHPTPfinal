@@ -1,5 +1,5 @@
 <?php
-require_once ('DAOFactory.php');
+require_once ('DAL/DAOFactory.php');
 class RestaurantManager
 {
     private static $restaurantManager;

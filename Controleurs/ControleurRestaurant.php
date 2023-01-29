@@ -1,6 +1,6 @@
 <?php
-require_once ('RestaurantManager.php');
-require_once ('AvisManager.php');
+require_once('BLL/RestaurantManager.php');
+require_once('BLL/AvisManager.php');
 //Récupération cookie
 if(isset($_SESSION['id'])){
     $idRestaurant = $_SESSION['id'];

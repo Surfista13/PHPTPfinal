@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Restaurants</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <?php
-include ('ControleurRestaurant.php');
+include('Controleurs/ControleurRestaurant.php');
 ?>
 </body>
 </html>

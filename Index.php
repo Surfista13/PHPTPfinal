@@ -15,9 +15,9 @@
             if(isset($_GET["id"])) {
                 session_start();
                 $_SESSION['id'] = $_GET["id"];
-                include('VueRestaurant.php');
-            }else{
-                include ('VueAcceuil.php');
+                include('Vues/VueRestaurant.php');
+            }else {
+                include('Vues/VueAcceuil.php');
             }
        ?>
     </main>

@@ -1,6 +1,6 @@
 <?php
-require_once ('ConnexionMsql.php');
-require_once ('DAOAvis.php');
+require_once ('ConnexionBdd/ConnexionMsql.php');
+require_once ('DAL/DAOAvis.php');
 class DAOAvisMsql implements DAOAvis
 {
 
